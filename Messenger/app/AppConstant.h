@@ -1,0 +1,277 @@
+//
+// Copyright (c) 2018 Related Code - http://relatedcode.com
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+#define		HEXCOLOR(c) [UIColor colorWithRed:((c>>24)&0xFF)/255.0 green:((c>>16)&0xFF)/255.0 blue:((c>>8)&0xFF)/255.0 alpha:((c)&0xFF)/255.0]
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+#define		SYSTEM_VERSION								[[UIDevice currentDevice] systemVersion]
+#define		SYSTEM_VERSION_EQUAL_TO(v)					([SYSTEM_VERSION compare:v options:NSNumericSearch] == NSOrderedSame)
+#define		SYSTEM_VERSION_GREATER_THAN(v)				([SYSTEM_VERSION compare:v options:NSNumericSearch] == NSOrderedDescending)
+#define		SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)	([SYSTEM_VERSION compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define		SYSTEM_VERSION_LESS_THAN(v)					([SYSTEM_VERSION compare:v options:NSNumericSearch] == NSOrderedAscending)
+#define		SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)		([SYSTEM_VERSION compare:v options:NSNumericSearch] != NSOrderedDescending)
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+#define		FIREBASE_STORAGE					@"gs://related37-a8a49.appspot.com"
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+#define		ONESIGNAL_APPID						@"15cad58e-b84c-47e1-a29b-932e88457132"
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+#define		SINCH_HOST							@"sandbox.sinch.com"
+#define		SINCH_KEY							@"b515eb8b-dcaf-473d-982a-81c5a97a3a1e"
+#define		SINCH_SECRET						@"mgnwHKZLIkahFoj90UsbCg=="
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+#define		DIALOGFLOW_ACCESS_TOKEN				@"25afaf278f20461abebaa02f1c9c86a7"
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+#define		PHONE_LOGIN_DOMAIN					@"yourdomain.com"
+#define		PHONE_LOGIN_PASSWORD				@"Q0wD3gtRv73Olz6E8g8G"
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+#define		VERSION_CUSTOM
+#define		VERSION_PREMIUM
+//---------------------------------------------------------------------------------
+#define		DEFAULT_TAB							0
+#define		DEFAULT_COUNTRY						84
+//---------------------------------------------------------------------------------
+#define		VIDEO_LENGTH						5
+#define		AUDIO_LENGTH						5
+#define		INSERT_MESSAGES						10
+#define		DOWNLOAD_TIMEOUT					300
+//---------------------------------------------------------------------------------
+#define		STATUS_LOADING						1
+#define		STATUS_SUCCEED						2
+#define		STATUS_MANUAL						3
+//---------------------------------------------------------------------------------
+#define		MEDIA_IMAGE							1
+#define		MEDIA_VIDEO							2
+#define		MEDIA_AUDIO							3
+//---------------------------------------------------------------------------------
+#define		NETWORK_MANUAL						1
+#define		NETWORK_WIFI						2
+#define		NETWORK_ALL							3
+//---------------------------------------------------------------------------------
+#define		KEEPMEDIA_WEEK						1
+#define		KEEPMEDIA_MONTH						2
+#define		KEEPMEDIA_FOREVER					3
+//---------------------------------------------------------------------------------
+#define		DEL_ACCOUNT_NONE					1
+#define		DEL_ACCOUNT_ONE						2
+#define		DEL_ACCOUNT_ALL						3
+//---------------------------------------------------------------------------------
+#define		CALLHISTORY_AUDIO					@"audio"
+#define		CALLHISTORY_VIDEO					@"video"
+//---------------------------------------------------------------------------------
+#define		MESSAGE_STATUS						@"status"
+#define		MESSAGE_TEXT						@"text"
+#define		MESSAGE_EMOJI						@"emoji"
+#define		MESSAGE_PICTURE						@"picture"
+#define		MESSAGE_VIDEO						@"video"
+#define		MESSAGE_AUDIO						@"audio"
+#define		MESSAGE_LOCATION					@"location"
+//---------------------------------------------------------------------------------
+#define		LOGIN_EMAIL							@"Email"
+#define		LOGIN_FACEBOOK						@"Facebook"
+#define		LOGIN_GOOGLE						@"Google"
+#define		LOGIN_PHONE							@"Phone"
+//---------------------------------------------------------------------------------
+#define		COLOR_OUTGOING						HEXCOLOR(0x007AFFFF)
+#define		COLOR_INCOMING						HEXCOLOR(0xE6E5EAFF)
+//---------------------------------------------------------------------------------
+#define		COLOR_NAVIGATION_TEXT				[UIColor whiteColor]
+#define		COLOR_NAVIGATION_BACKGROUND			HEXCOLOR(0x7FBB00FF)
+//---------------------------------------------------------------------------------
+#define		TEXT_QUEUED							@"Queued"
+#define		TEXT_SENT							@"Sent"
+#define		TEXT_READ							@"Read"
+//---------------------------------------------------------------------------------
+#define		LINK_PREMIUM						@"http://www.relatedcode.com/premium"
+//---------------------------------------------------------------------------------
+#define		SCREEN_WIDTH						[UIScreen mainScreen].bounds.size.width
+#define		SCREEN_HEIGHT						[UIScreen mainScreen].bounds.size.height
+//---------------------------------------------------------------------------------
+#define		TEXT_SHARE_APP						@"Check out PremiumChat for your smartphone. Download it today."
+#define		TEXT_INVITE_SMS						@"Check out PremiumChat for your smartphone. Download it today."
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+#define		FBLOCKED_PATH						@"Blocked"				//	Path name
+#define		FBLOCKED_OBJECTID					@"objectId"				//	String
+
+#define		FBLOCKED_BLOCKEDID					@"blockedId"			//	String
+#define		FBLOCKED_ISDELETED					@"isDeleted"			//	Boolean
+
+#define		FBLOCKED_CREATEDAT					@"createdAt"			//	Timestamp
+#define		FBLOCKED_UPDATEDAT					@"updatedAt"			//	Timestamp
+//---------------------------------------------------------------------------------
+#define		FBLOCKER_PATH						@"Blocker"				//	Path name
+#define		FBLOCKER_OBJECTID					@"objectId"				//	String
+
+#define		FBLOCKER_BLOCKERID					@"blockerId"			//	String
+#define		FBLOCKER_ISDELETED					@"isDeleted"			//	Boolean
+
+#define		FBLOCKER_CREATEDAT					@"createdAt"			//	Timestamp
+#define		FBLOCKER_UPDATEDAT					@"updatedAt"			//	Timestamp
+//---------------------------------------------------------------------------------
+#define		FCALLHISTORY_PATH					@"CallHistory"			//	Path name
+#define		FCALLHISTORY_OBJECTID				@"objectId"				//	String
+
+#define		FCALLHISTORY_INITIATORID			@"initiatorId"			//	String
+#define		FCALLHISTORY_RECIPIENTID			@"recipientId"			//	String
+#define		FCALLHISTORY_PHONENUMBER			@"phoneNumber"			//	String
+
+#define		FCALLHISTORY_TYPE					@"type"					//	String
+#define		FCALLHISTORY_TEXT					@"text"					//	String
+
+#define		FCALLHISTORY_STATUS					@"status"				//	String
+#define		FCALLHISTORY_DURATION				@"duration"				//	Number
+
+#define		FCALLHISTORY_STARTEDAT				@"startedAt"			//	Timestamp
+#define		FCALLHISTORY_ESTABLISHEDAT			@"establishedAt"		//	Timestamp
+#define		FCALLHISTORY_ENDEDAT				@"endedAt"				//	Timestamp
+
+#define		FCALLHISTORY_ISDELETED				@"isDeleted"			//	Boolean
+
+#define		FCALLHISTORY_CREATEDAT				@"createdAt"			//	Timestamp
+#define		FCALLHISTORY_UPDATEDAT				@"updatedAt"			//	Timestamp
+//---------------------------------------------------------------------------------
+#define		FFRIEND_PATH						@"Friend"				//	Path name
+#define		FFRIEND_OBJECTID					@"objectId"				//	String
+
+#define		FFRIEND_FRIENDID					@"friendId"				//	String
+#define		FFRIEND_ISDELETED					@"isDeleted"			//	Boolean
+
+#define		FFRIEND_CREATEDAT					@"createdAt"			//	Timestamp
+#define		FFRIEND_UPDATEDAT					@"updatedAt"			//	Timestamp
+//---------------------------------------------------------------------------------
+#define		FLASTREAD_PATH						@"LastRead"				//	Path name
+//---------------------------------------------------------------------------------
+#define		FLINKEDID_PATH						@"LinkedId"				//	Path name
+#define		FLINKEDUSER_PATH					@"LinkedUser"			//	Path name
+//---------------------------------------------------------------------------------
+#define		FMESSAGE_PATH						@"Message"				//	Path name
+#define		FMESSAGE_OBJECTID					@"objectId"				//	String
+
+#define		FMESSAGE_CHATID						@"chatId"				//	String
+#define		FMESSAGE_MEMBERS					@"members"				//	Array
+
+#define		FMESSAGE_SENDERID					@"senderId"				//	String
+#define		FMESSAGE_SENDERNAME					@"senderName"			//	String
+#define		FMESSAGE_SENDERINITIALS				@"senderInitials"		//	String
+#define		FMESSAGE_SENDERPICTURE				@"senderPicture"		//	String
+
+#define		FMESSAGE_RECIPIENTID				@"recipientId"			//	String
+#define		FMESSAGE_RECIPIENTNAME				@"recipientName"		//	String
+#define		FMESSAGE_RECIPIENTINITIALS			@"recipientInitials"	//	String
+#define		FMESSAGE_RECIPIENTPICTURE			@"recipientPicture"		//	String
+
+#define		FMESSAGE_TYPE						@"type"					//	String
+#define		FMESSAGE_TEXT						@"text"					//	String
+
+#define		FMESSAGE_PICTURE					@"picture"				//	String
+#define		FMESSAGE_PICTURE_WIDTH				@"picture_width"		//	Number
+#define		FMESSAGE_PICTURE_HEIGHT				@"picture_height"		//	Number
+#define		FMESSAGE_PICTURE_MD5				@"picture_md5"			//	String
+
+#define		FMESSAGE_VIDEO						@"video"				//	String
+#define		FMESSAGE_VIDEO_DURATION				@"video_duration"		//	Number
+#define		FMESSAGE_VIDEO_MD5					@"video_md5"			//	String
+
+#define		FMESSAGE_AUDIO						@"audio"				//	String
+#define		FMESSAGE_AUDIO_DURATION				@"audio_duration"		//	Number
+#define		FMESSAGE_AUDIO_MD5					@"audio_md5"			//	String
+
+#define		FMESSAGE_LATITUDE					@"latitude"				//	Number
+#define		FMESSAGE_LONGITUDE					@"longitude"			//	Number
+
+#define		FMESSAGE_STATUS						@"status"				//	String
+#define		FMESSAGE_ISDELETED					@"isDeleted"			//	Boolean
+
+#define		FMESSAGE_CREATEDAT					@"createdAt"			//	Timestamp
+#define		FMESSAGE_UPDATEDAT					@"updatedAt"			//	Timestamp
+//---------------------------------------------------------------------------------
+#define		FMUTEDUNTIL_PATH					@"MutedUntil"			//	Path name
+//---------------------------------------------------------------------------------
+#define		FSTATUS_PATH						@"Status"				//	Path name
+#define		FSTATUS_OBJECTID					@"objectId"				//	String
+
+#define		FSTATUS_CHATID						@"chatId"				//	String
+#define		FSTATUS_LASTREAD					@"lastRead"				//	Timestamp
+#define		FSTATUS_MUTEDUNTIL					@"mutedUntil"			//	Timestamp
+
+#define		FSTATUS_CREATEDAT					@"createdAt"			//	Timestamp
+#define		FSTATUS_UPDATEDAT					@"updatedAt"			//	Timestamp
+//---------------------------------------------------------------------------------
+#define		FTYPING_PATH						@"Typing"				//	Path name
+//---------------------------------------------------------------------------------
+#define		FUSER_PATH							@"User"					//	Path name
+#define		FUSER_OBJECTID						@"objectId"				//	String
+
+#define		FUSER_EMAIL							@"email"				//	String
+#define		FUSER_PHONE							@"phone"				//	String
+
+#define		FUSER_FIRSTNAME						@"firstname"			//	String
+#define		FUSER_LASTNAME						@"lastname"				//	String
+#define		FUSER_FULLNAME						@"fullname"				//	String
+#define		FUSER_COUNTRY						@"country"				//	String
+#define		FUSER_LOCATION						@"location"				//	String
+#define		FUSER_STATUS						@"status"				//	String
+
+#define		FUSER_PICTURE						@"picture"				//	String
+#define		FUSER_THUMBNAIL						@"thumbnail"			//	String
+
+#define		FUSER_KEEPMEDIA						@"keepMedia"			//	Number
+#define		FUSER_NETWORKIMAGE					@"networkImage"			//	Number
+#define		FUSER_NETWORKVIDEO					@"networkVideo"			//	Number
+#define		FUSER_NETWORKAUDIO					@"networkAudio"			//	Number
+#define		FUSER_WALLPAPER						@"wallpaper"			//	String
+
+#define		FUSER_LOGINMETHOD					@"loginMethod"			//	String
+#define		FUSER_ONESIGNALID					@"oneSignalId"			//	String
+
+#define		FUSER_LASTACTIVE					@"lastActive"			//	Timestamp
+#define		FUSER_LASTTERMINATE					@"lastTerminate"		//	Timestamp
+
+#define		FUSER_CREATEDAT						@"createdAt"			//	Timestamp
+#define		FUSER_UPDATEDAT						@"updatedAt"			//	Timestamp
+//---------------------------------------------------------------------------------
+#define		FUSERSTATUS_PATH					@"UserStatus"			//	Path name
+#define		FUSERSTATUS_OBJECTID				@"objectId"				//	String
+
+#define		FUSERSTATUS_NAME					@"name"					//	String
+
+#define		FUSERSTATUS_CREATEDAT				@"createdAt"			//	Timestamp
+#define		FUSERSTATUS_UPDATEDAT				@"updatedAt"			//	Timestamp
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+#define		ONESIGNALID							@"OneSignalId"
+#define		USER_ACCOUNTS						@"UserAccounts"
+#define		LINKEDUSERIDS						@"LinkedUserIds"
+#define		REACHABILITY_CHANGED				@"ReachabilityChanged"
+//---------------------------------------------------------------------------------
+#define		NOTIFICATION_APP_STARTED			@"NotificationAppStarted"
+#define		NOTIFICATION_USER_LOGGED_IN			@"NotificationUserLoggedIn"
+#define		NOTIFICATION_USER_LOGGED_OUT		@"NotificationUserLoggedOut"
+//---------------------------------------------------------------------------------
+#define		NOTIFICATION_REFRESH_BLOCKEDS		@"NotificationRefreshBlockeds"
+#define		NOTIFICATION_REFRESH_BLOCKERS		@"NotificationRefreshBlockers"
+#define		NOTIFICATION_REFRESH_CALLHISTORIES	@"NotificationRefreshCallHistories"
+#define		NOTIFICATION_REFRESH_CHATS			@"NotificationRefreshChats"
+#define		NOTIFICATION_REFRESH_CONTACTS		@"NotificationRefreshContacts"
+#define		NOTIFICATION_REFRESH_FRIENDS		@"NotificationRefreshFriends"
+#define		NOTIFICATION_REFRESH_MESSAGES1		@"NotificationRefreshMessages1"
+#define		NOTIFICATION_REFRESH_MESSAGES2		@"NotificationRefreshMessages2"
+#define		NOTIFICATION_REFRESH_STATUSES		@"NotificationRefreshStatuses"
+#define		NOTIFICATION_REFRESH_USERS			@"NotificationRefreshUsers"
+//-------------------------------------------------------------------------------------------------------------------------------------------------

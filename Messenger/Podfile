@@ -1,0 +1,26 @@
+platform :ios, '11.0'
+
+target 'app' do
+	pod 'ApiAI/Core'
+	pod 'Crashlytics'
+	pod 'FBSDKCoreKit'
+	pod 'FBSDKLoginKit'
+	pod 'Firebase/Core'
+	pod 'Firebase/Auth'
+	pod 'Firebase/Database'
+	pod 'Firebase/Storage'
+	pod 'GoogleSignIn'
+	pod 'OneSignal', '2.5.0'
+	pod 'Realm'
+	pod 'SinchRTC'
+	pod 'SinchVerification'
+
+	pod 'MBProgressHUD'
+	pod 'MGSwipeTableCell'
+	pod 'NYTPhotoViewer', '1.2.0'
+	pod 'ProgressHUD'
+	pod 'RCAudioPlayer'
+	pod 'RCMessageKit'
+	pod 'Reachability'
+	pod 'RNCryptor-objc'
+end
